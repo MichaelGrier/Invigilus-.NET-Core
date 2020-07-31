@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invigulus.Data", "Invigulus.Data\Invigulus.Data.csproj", "{D763C860-4056-4E95-9608-6316B4B631D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invigulus.App", "Invigulus.App\Invigulus.App.csproj", "{A1B9E9CF-9A11-4E4A-B873-72BB7287DAB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D763C860-4056-4E95-9608-6316B4B631D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D763C860-4056-4E95-9608-6316B4B631D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D763C860-4056-4E95-9608-6316B4B631D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D763C860-4056-4E95-9608-6316B4B631D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1B9E9CF-9A11-4E4A-B873-72BB7287DAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B9E9CF-9A11-4E4A-B873-72BB7287DAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B9E9CF-9A11-4E4A-B873-72BB7287DAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B9E9CF-9A11-4E4A-B873-72BB7287DAB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB6EFED9-6855-403B-9C5E-255262E9B0AD}
+	EndGlobalSection
+EndGlobal
