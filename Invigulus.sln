@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invigulus.Data", "Invigulus.Data\Invigulus.Data.csproj", "{D763C860-4056-4E95-9608-6316B4B631D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invigulus.Data", "Invigulus.Data\Invigulus.Data.csproj", "{D763C860-4056-4E95-9608-6316B4B631D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invigulus.App", "Invigulus.App\Invigulus.App.csproj", "{A1B9E9CF-9A11-4E4A-B873-72BB7287DAB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invigulus.App", "Invigulus.App\Invigulus.App.csproj", "{A1B9E9CF-9A11-4E4A-B873-72BB7287DAB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invigulus.Business", "Invigulus.Business\Invigulus.Business.csproj", "{39BBEFBD-57A6-45C8-A99B-8F763C183CF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A1B9E9CF-9A11-4E4A-B873-72BB7287DAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1B9E9CF-9A11-4E4A-B873-72BB7287DAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1B9E9CF-9A11-4E4A-B873-72BB7287DAB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39BBEFBD-57A6-45C8-A99B-8F763C183CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39BBEFBD-57A6-45C8-A99B-8F763C183CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39BBEFBD-57A6-45C8-A99B-8F763C183CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39BBEFBD-57A6-45C8-A99B-8F763C183CF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Invigulus.Business\Invigulus.Business.csproj" />
     <ProjectReference Include="..\Invigulus.Data\Invigulus.Data.csproj" />
   </ItemGroup>
 
