@@ -40,6 +40,8 @@ namespace Invigulus.App
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+
+            app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.UseRouting();
