@@ -1,5 +1,6 @@
 
 using Invigulus.Data.Domain;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,7 @@ namespace Invigulus.App
         {
             services.AddDbContext<InvigulusContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("InvigilusConnection")));
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opt => opt.LoginPath="/Account/Login");
             services.AddControllersWithViews();
         }
 
@@ -41,7 +43,10 @@ namespace Invigulus.App
             }
             app.UseHttpsRedirection();
 
+            app.UseStatusCodePages();
+
             app.UseDefaultFiles();
+
             app.UseStaticFiles();
 
             app.UseRouting();
