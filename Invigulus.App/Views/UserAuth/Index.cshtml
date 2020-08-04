@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Edvin Lin OOSD 2020 Currently only meant to be displayed on 1920x1080 100%-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- normalize.css -->
+
+    <!--Webcam.js-->
+    <script src="~/js/webcam.min.js"></script>
+
+    <!-- Student Code -->
+    <link rel="stylesheet" href="~/css/registration.css" type="text/css">
+  
+
+
+    <link rel="stylesheet" href="~/css/normalize.css">
+
+    <!-- custom styles -->
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/queries.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="~/img/favicon.png">
+</head>
+
+<!-- Start of Body -->
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="greenbox invigulus-logo-color">
+        <!-- Outer Box Start-->
+        <div class="container-fluid">
+            <h5 align="center"> User Authentication </h5>
+            <div class="row">
+                <!-- Inner Box Start-->
+                <!-- Box to Display Webcam Image -->
+                <div class="col-md-9 boxn">
+                    <div class="cameraframe" id="my_camera"></div>
+                </div>
+                <script>
+
+                    Webcam.set({
+                        dest_width: 351,
+                        dest_height: 290,
+                        image_format: 'jpeg',
+                        jpeg_quality: 90
+                    });
+                    Webcam.attach('#my_camera');
+                </script>
+
+                <!-- Display Images Taken By WebCam -->
+                <div class="col-md-3 boxn">
+                    <!-- Start of Image Column -->
+                    <form id="imageform" method="post">
+                        <h6 align="center" style="color:#000"> Headshot </h6>
+                        <div class="boximageframe ">
+                            <div id="headshot" name="hdshot"></div>
+                        </div>
+                        <h6 align="center" style="color:#000"> Photo ID </h6>
+                        <div class="boximageframe">
+                            <div id="photoid" name="pid"></div>
+                        </div>
+                    </form>
+                    <!-- End of Image Column -->
+                </div>
+                <!-- End of Row -->
+            </div>
+            <!-- Image Taking Buttons -->
+            <div class="row">
+                <div class="col-md-11">
+       
+                        <button type="button" class="camera_btn" onClick="take_headshot()"> Take Headshot </button>
+                        <button type="button" class="camera_btn" onClick="take_id()"> Take PhotoID </button>
+             
+                </div>
+                <div class="col-md-1" style="align: right">
+                    <button type="button" onClick="return sendPicsData()"> <a href="/connect">Continue</a></button>
+                </div>
+                <!-- Add Image Upload functionality later -->
+            </div>
+        </div>
+
+        <!-- End of Outer Box -->
+        <!-- W3 Schools js popup chat -->
+    </div>
+    <div class="chat-popup" id="myForm">
+        <form class="form-container">
+            <!-- action="/action_page.php" Taken out from above-->
+            <p style="color:#000">Placeholder Live Chat</p>
+          
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+
+        <!-- End of Chat -->
+    </div>
+    <!-- Code to handle taking the snapshot and displaying it locally -->
+    <script language="JavaScript">
+        function take_headshot() {
+            // take snapshot and get image data
+            Webcam.snap(function (data_uri) {
+                // display results in page
+             
+         
+                document.getElementById('headshot').innerHTML =
+                    '<img src="' +
+                    data_uri +
+                    '"/>';
+         
+                Webcam.upload(data_uri,
+                    '/UserAuth',
+                    function (code, text) {
+                        alert('Photo Captured');
+                    });
+            });
+        }
+
+        function take_id() {
+            // take snapshot and get image data
+            Webcam.snap(function (data_uri) {
+                // display results in page
+                document.getElementById('photoid').innerHTML =
+                    '<img src="' +
+                    data_uri +
+                    '"/>';
+             
+                Webcam.upload(data_uri,
+                    '/UserAuth',
+                    function (code, text) {
+                        alert('Photo Captured');
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -23,7 +23,7 @@ namespace Invigulus.Data.Domain
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //optionsBuilder.UseSqlServer("Server=localhost\\sqlexpress;Database=Invigulus;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=localhost\\sqlexpress;Database=Invigulus;Trusted_Connection=True;");
             }
         }
 
@@ -155,6 +155,11 @@ namespace Invigulus.Data.Domain
                     .HasColumnName("Date_time")
                     .HasColumnType("datetime")
                     .HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.ImageStore)
+                    .IsRequired()
+                    .HasColumnType("varchar(max)")
+                    .IsUnicode(false);
 
                 entity.Property(e => e.ExamId).HasColumnName("ExamID");
 

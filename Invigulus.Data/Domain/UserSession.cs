@@ -14,5 +14,6 @@ namespace Invigulus.Data.Domain
         public virtual Exam Exam { get; set; }
         public virtual Examinee Examinee { get; set; }
         public virtual Proctor Proctor { get; set; }
+        public String ImageStore { get; set; }
     }
 }
