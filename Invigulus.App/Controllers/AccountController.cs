@@ -44,7 +44,7 @@ namespace Invigulus.App.Controllers
 
             if (TempData["ReturnUrl"] == null)
             {
-                return Redirect("/");
+                return Redirect("/begin.html");
                 //RedirectToAction("Index", "Home");
             }
             else

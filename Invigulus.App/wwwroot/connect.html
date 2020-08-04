@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- custom styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <title>Invigilus Exam Registration</title>
+</head>
+<body>
+    <nav class="navigation">
+        <img src="img/logo.png" class="navigation_logo" alt="logo">
+        <ul class="navigation_links">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about us</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT GOES HERE -->
+    <main id="main">
+        <h1 class="please-wait_heading">Please wait while we connect to your exam</h1>
+        <div class="loading-dots">
+            <a class="loading-dots_link" href="/thanks">
+                <h1 class="dot one">.</h1><h1 class="dot two">.</h1><h1 class="dot three">.</h1>
+            </a>
+        </div>
+        <h4 class="reminder"></h4>
+    </main>
+
+    <footer id="footer">
+        <div class="footer_wrap">
+            <ul class="footer_nav">
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+
+            <div class="footer_tag">
+                <p>developed by the SAIT OOSD program &copy; 2020</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- custom script -->
+    <script src="js/script.js"></script>
+    <script>timeReminder();</script>
+</body>
+</html>
