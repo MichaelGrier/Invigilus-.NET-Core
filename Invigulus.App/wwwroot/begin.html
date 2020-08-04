@@ -7,11 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <!-- normalize.css -->
     <link rel="stylesheet" href="css/normalize.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <!-- custom styles -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/queries.css">
     <!-- favicon -->
     <link rel="icon" type="image/png" href="img/favicon.png">
+
     <title>Invigilus Exam Registration</title>
 </head>
 <body>
@@ -20,29 +23,25 @@
         <ul class="navigation_links">
             <li><a href="#">home</a></li>
             <li><a href="#">about us</a></li>
-            <li><a class="nav-link text-dark" href="UserAuth/Index">User Auth</a></li>
         </ul>
     </nav>
 
-    <!-- MAIN CONTENT GOES HERE -->
-    <main id="main">
-        <div class="hero">
-            <h1 class="hero_title">
-                To improve lives and<br />
-                empower people on their<br />
-                educational journey
-            </h1>
-            <a class="hero_btn" href="Examinee/Create">Register &nbsp; &#8250</a>
+    <main role="main" id="main">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h4 style="margin-top: 14rem">Click Below to Begin Your Exam</h4>
+            </div>
+            <div class="row justify-content-center">
+                <a href="/connect.html" class="btn btn-lg btn-light" style="margin-top:1rem;">Begin Exam</a>
+                <a href="#" class="btn btn-lg btn-light" style="margin-top:1rem; margin-left:0.75rem">Edit Info</a>
+            </div>
         </div>
-        <img class="people" src="img/people.png">
     </main>
 
     <footer id="footer">
         <div class="footer_wrap">
             <ul class="footer_nav">
-
-            
-                <li><a href="">privacy policy</a></li>
+                <li><a href="#">privacy policy</a></li>
                 <li><a href="#">blog</a></li>
                 <li><a href="#">contact</a></li>
             </ul>
@@ -52,6 +51,7 @@
             </div>
         </div>
     </footer>
+
     <!-- custom script -->
     <script src="js/script.js"></script>
 </body>

@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Invigulus.Data.Domain
+namespace Invigulus.App.Models
 {
-    public partial class Examinee
+    public class AddExamineeViewModel
     {
         [Display(Name = "Examinee ID")]
-        public int ExamineeId { get; set; }
+        public string ExamineeId { get; set; }
         [Required]
         [Display(Name = "First Name")]
         public string ExamineeFirstname { get; set; }
@@ -17,7 +19,5 @@ namespace Invigulus.Data.Domain
         [Required]
         [Display(Name = "Email")]
         public string ExamineeEmail { get; set; }
-
-        public virtual ICollection<UserSession> UserSession { get; set; }
     }
 }

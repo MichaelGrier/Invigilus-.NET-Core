@@ -1,11 +1,15 @@
 
 using Invigulus.Data.Domain;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.IO;
+using System.Net;
 
 namespace Invigulus.App
 {
@@ -24,6 +28,7 @@ namespace Invigulus.App
             services.AddMvc();
             services.AddDbContext<InvigulusContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("InvigilusConnection")));
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opt => opt.LoginPath="/Account/Login");
             services.AddControllersWithViews();
         }
 
@@ -42,8 +47,35 @@ namespace Invigulus.App
             }
             app.UseHttpsRedirection();
 
+            app.UseStatusCodePages();
+
             app.UseDefaultFiles();
+
             app.UseStaticFiles();
+
+            app.UseAuthentication();
+
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    OnPrepareResponse = ctx =>
+            //    {
+            //        if (ctx.Context.Request.Path.StartsWithSegments("/begin.html"))
+            //        {
+            //            ctx.Context.Response.Headers.Add("Cache-Control", "no-store");
+
+            //            if (!ctx.Context.User.Identity.IsAuthenticated)
+            //            {
+            //                // respond HTTP 401 Unauthorized with empty body.
+            //                ctx.Context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+            //                ctx.Context.Response.ContentLength = 0;
+            //                ctx.Context.Response.Body = Stream.Null;
+
+            //                // - or, redirect to another page. -
+            //                ctx.Context.Response.Redirect("/Account/Login");
+            //            }
+            //        }
+            //    }
+            //});
 
             app.UseRouting();
 
