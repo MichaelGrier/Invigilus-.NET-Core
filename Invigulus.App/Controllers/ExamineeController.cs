@@ -25,13 +25,18 @@ namespace Invigulus.App.Controllers
             {
                 ExamineeManager.Add(examinee);
                 Console.WriteLine("success" + examinee);
-                return RedirectToAction("Login", "Account");
+                return RedirectToAction("Index", "UserAuth");
             }
             catch
             {
                 Console.WriteLine("fail" + examinee);
                 return View();
             }
+        }
+
+        public IActionResult Thanks()
+        {
+            return View();
         }
     }
 }
