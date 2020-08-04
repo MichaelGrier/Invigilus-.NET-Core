@@ -3,18 +3,18 @@
     ViewData["Title"] = "Thanks";
 }
 
-<h1>Thanks</h1>
 
 <body>
     <main id="main">
         <div class="thanks">
-            <h1 class="thanks_title">
-                <span id="uxThanks"></span>
-            </h1>
-            <h2>
+            <h2 class="thanks_title">
+                <span id="uxThanks"> Thanks @User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Name).Value !</span>
+    
+            </h2>
+            <h4>
                 We will send an email with our survey link to you shortly.<br />
                 Take a break, you've earned it!
-            </h2>
+            </h4>
         </div>
     </main>
 
