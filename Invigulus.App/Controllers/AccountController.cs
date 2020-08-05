@@ -44,13 +44,18 @@ namespace Invigulus.App.Controllers
 
             if (TempData["ReturnUrl"] == null)
             {
-                return Redirect("/begin.html");
-                //RedirectToAction("Index", "Home");
+                return RedirectToAction("Display", "Examinee");
             }
             else
             {
                 return Redirect(TempData["ReturnUrl"].ToString());
             }
+        }
+
+        public async Task<IActionResult> LogoutAsync()
+        {
+            await HttpContext.SignOutAsync("Cookies");
+            return RedirectToAction("Login", "Account");
         }
     }
 }

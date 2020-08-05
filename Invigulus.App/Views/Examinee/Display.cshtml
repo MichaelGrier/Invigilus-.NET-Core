@@ -1,0 +1,44 @@
+﻿@model Invigulus.Data.Domain.Examinee
+
+@{
+    ViewData["Title"] = "Display";
+}
+
+<div class="container">
+    <h4 style="padding-top:3rem; padding-bottom:.75rem; text-align:center">Your Info:</h4>
+    <dl class="row justify-content-center">
+        <dt class="col-sm-6 text-right">
+            @Html.DisplayNameFor(model => model.ExamineeId)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.ExamineeId)
+        </dd>
+        <dt class="col-sm-6 text-right">
+            @Html.DisplayNameFor(model => model.ExamineeFirstname)
+            &nbsp;&nbsp;&nbsp;
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.ExamineeFirstname)
+        </dd>
+        <dt class="col-sm-6 text-right">
+            @Html.DisplayNameFor(model => model.ExamineeLastname)
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.ExamineeLastname)
+        </dd>
+        <dt class="col-sm-6 text-right">
+            @Html.DisplayNameFor(model => model.ExamineeEmail)
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.ExamineeEmail)
+        </dd>
+    </dl>
+    <div class="row justify-content-center">
+        <a href="/connect.html" class="btn btn-lg btn-light" style="margin-top:1rem;">Begin Exam</a>
+        <a href="@Url.Action("Edit", "Examinee", new { id = Model.ExamineeId })" class="btn btn-lg btn-light" style="margin-top:1rem; margin-left:0.75rem">Edit Info</a>
+    </div>
+</div>
