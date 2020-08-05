@@ -42,8 +42,8 @@ namespace Invigulus.App.Controllers
             return View(examinee);
         }
 
-        // generate view to edit examinee info
         [Authorize]
+        // generate view to edit examinee info
         public ActionResult Edit(int id)
         {
             var examinee = ExamineeManager.Find(id);

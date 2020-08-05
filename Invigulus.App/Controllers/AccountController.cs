@@ -42,6 +42,8 @@ namespace Invigulus.App.Controllers
 
             await HttpContext.SignInAsync("Cookies", new ClaimsPrincipal(claimsIdentity));
 
+            //return RedirectToAction("Display", "Examinee");
+
             if (TempData["ReturnUrl"] == null)
             {
                 return RedirectToAction("Display", "Examinee");

@@ -5,7 +5,7 @@
 }
 
 <div class="container">
-    <h4 style="padding-top:3rem; padding-bottom:.75rem; text-align:center">Your Info:</h4>
+    <h4 style="padding-top:4rem; padding-bottom:.75rem; text-align:center">Your Info:</h4>
     <dl class="row justify-content-center">
         <dt class="col-sm-6 text-right">
             @Html.DisplayNameFor(model => model.ExamineeId)
@@ -40,5 +40,10 @@
     <div class="row justify-content-center">
         <a href="/connect.html" class="btn btn-lg btn-light" style="margin-top:1rem;">Begin Exam</a>
         <a href="@Url.Action("Edit", "Examinee", new { id = Model.ExamineeId })" class="btn btn-lg btn-light" style="margin-top:1rem; margin-left:0.75rem">Edit Info</a>
+    </div>
+    <div class="row justify-content-center" style="margin-top: 3rem;">
+        <form>
+            <input type="submit" value="Logout" class="btn btn-sm btn-light" asp-controller="Account" asp-action="Logout" />
+        </form>
     </div>
 </div>
