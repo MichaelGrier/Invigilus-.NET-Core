@@ -15,20 +15,29 @@
     <link rel="stylesheet" href="~/css/queries.css">
     <!-- favicon -->
     <link rel="icon" type="image/png" href="~/img/favicon.png">
+
+    <!-- normalize.css -->
+    <!--Webcam.js-->
+    <script src="~/js/webcam.min.js"></script>
+
+    <!-- Student Code -->
+    <link rel="stylesheet" href="~/css/registration.css" type="text/css">
+
     <title>Invigilus Exam Registration</title>
 </head>
 <body>
     <nav class="navigation">
         <img src="~/img/logo.png" class="navigation_logo" alt="logo">
         <ul class="navigation_links">
-            <li><a href="#">home</a></li>
+            <li><a href="~/">home</a></li>
             <li><a href="#">about us</a></li>
+            <li><a class="loginButton" asp-controller="Account" asp-action="Login">login</a></li>
         </ul>
     </nav>
 
     <!-- MAIN CONTENT LOADS HERE -->
 
-    <main role="main" id="main">
+    <main role="main" id="main" class="authBody">
         @RenderBody()
     </main>
 
@@ -36,9 +45,9 @@
         <div class="footer_wrap">
             <ul class="footer_nav">
 
-                <li><a href="#">privacy sdfjldsfjldskf</a></li>
+                <li><a href="#">privacy</a></li>
                 <li><a href="#">blog</a></li>
-                <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+            
             </ul>
 
             <div class="footer_tag">

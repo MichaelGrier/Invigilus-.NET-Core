@@ -3,35 +3,6 @@
     ViewData["Title"] = "Index";
 }
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <!-- Edvin Lin OOSD 2020 Currently only meant to be displayed on 1920x1080 100%-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-
-    <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- normalize.css -->
-
-    <!--Webcam.js-->
-    <script src="~/js/webcam.min.js"></script>
-
-    <!-- Student Code -->
-    <link rel="stylesheet" href="~/css/registration.css" type="text/css">
-  
-
-
-    <link rel="stylesheet" href="~/css/normalize.css">
-
-    <!-- custom styles -->
-    <link rel="stylesheet" href="~/css/style.css">
-    <link rel="stylesheet" href="~/css/queries.css">
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="~/img/favicon.png">
-</head>
 
 <!-- Start of Body -->
 
@@ -123,7 +94,7 @@
                 Webcam.upload(data_uri,
                     '/UserAuth',
                     function (code, text) {
-                        alert('Photo Captured');
+                  
                     });
             });
         }
@@ -140,11 +111,11 @@
                 Webcam.upload(data_uri,
                     '/UserAuth',
                     function (code, text) {
-                        alert('Photo Captured');
+               
                     });
             });
         }
     </script>
 </body>
 
-</html>
+

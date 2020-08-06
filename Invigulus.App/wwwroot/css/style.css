@@ -64,22 +64,25 @@ body {
 }
 
 #main {
-    height: 75vh;
+    height: 77vh;
     width: 100%;
 	background-color: #3cb650;
 }
 
 .people {
-	height: 82vh;
-	position: relative;
-	top: -5%;
-	margin: 0 auto 0 auto;
-	animation: fadein 1s forwards;
+    height: 82vh;
+    position: relative;
+    top: -5%;
+    margin: 0 auto 0 auto;
+    animation: fadein 1s forwards;
 }
 
+.loginButton {
+    margin-left: 40px;
+}
 /* Animation for image fade in */
-@keyframes fadein{
-	from {left: 40%}
+@keyframes fadein {
+    from {left: 40%}
 	to {left: 45%}
 	from {opacity: 0}
 	to {opacity: 1}
