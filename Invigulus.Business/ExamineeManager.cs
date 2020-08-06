@@ -7,12 +7,37 @@ namespace Invigulus.Business
 {
     public class ExamineeManager
     {
-        // add an examinee to the db
+        public static Examinee GetLast()
+        {
+            var context = new ExamineeContext();
+            var examinee = context.Examinees
+                           .OrderByDescending(e => e.ExamineeId)
+                           .FirstOrDefault();
+            return examinee;
+        }
+
         public static void Add(Examinee examinee)
         {
             var context = new ExamineeContext();
             context.Examinees.Add(examinee);
             context.SaveChanges();
+        }
+
+        public static void Update(Examinee examinee)
+        {
+            var context = new ExamineeContext();
+            var examineeToEdit = context.Examinees.Find(examinee.ExamineeId);
+            examineeToEdit.ExamineeFirstname = examinee.ExamineeFirstname;
+            examineeToEdit.ExamineeLastname = examinee.ExamineeLastname;
+            examineeToEdit.ExamineeEmail = examinee.ExamineeEmail;
+            context.SaveChanges();
+        }
+
+        public static Examinee Find(int id)
+        {
+            var context = new ExamineeContext();
+            var examinee = context.Examinees.Find(id);
+            return examinee;
         }
 
         // authenticate an examinee's info against the db
